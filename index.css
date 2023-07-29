@@ -173,6 +173,11 @@ label{
     color:rgb(6, 127, 233);
 }
 
+@media(max-width:600px){
+    .market1-cap, .volum1{
+        display:none;
+    }
+}
 
 /* for tablet  */
 
