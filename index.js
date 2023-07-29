@@ -61,6 +61,9 @@ getServerData();
  let cardContainers;
  let priceButtons;
 
+let p1Values;
+ let p2Values;
+
  const mainContainer = document.getElementById("main-con"); 
 
  function getElements(){
@@ -91,8 +94,21 @@ getServerData();
              priceButtons.forEach((but)=>{
                 but.classList.add("price-change-btn-grid");
                 but.classList.remove("price-change-btn-list");
-             })
+             });
 
+              p1Values = Array.from(document.getElementsByClassName("volum"));
+              p2Values = Array.from(document.getElementsByClassName("market-cap"));
+
+             p1Values.forEach((val)=>{
+               val.classList.remove("market1-cap");
+               val.classList.remove("volum1");
+
+             });
+             p2Values.forEach((val)=>{
+               val.classList.remove("market1-cap");
+               val.classList.remove("volum1");
+
+             });
              
                  
  });
@@ -116,9 +132,21 @@ getServerData();
     priceButtons.forEach((but)=>{
        but.classList.remove("price-change-btn-grid");
        but.classList.add("price-change-btn-list");
-    })
+    });
 
-    
+         p1Values = Array.from(document.getElementsByClassName("volum"));
+              p2Values = Array.from(document.getElementsByClassName("market-cap"));
+
+             p1Values.forEach((val)=>{
+               val.classList.add("market1-cap");
+               val.classList.add("volum1");
+
+             });
+             p2Values.forEach((val)=>{
+               val.classList.add("market1-cap");
+               val.classList.add("volum1");
+
+             });
         
 });
 
