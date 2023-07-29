@@ -1,0 +1,220 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+    background-color: rgb(12, 11, 11);
+}
+/* css for mobile */
+
+h2{
+    color:rgb(243, 243, 243);
+    padding:4px 0px 4px 20px ;
+    margin-top: 20px;
+}
+
+
+/* css for grid and list button */
+.btnn-container{
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+   margin:17px 0px;
+  
+}
+.grid-btn ,.list-btn{
+    padding:3px 0px;
+    font-weight:700;
+    border:none;
+    color:rgb(243, 243, 243);
+    background-color: rgb(12, 11, 11);
+    font-size: 15px;
+}
+
+.priceButt{
+    border: 2px solid rgba(3, 91, 3, 0.95);
+    color: rgba(3, 91, 3, 0.95);
+}
+.current-price{
+    color: rgba(3, 91, 3, 0.95);
+}
+.current-red{
+    color:rgba(180, 11, 8, 0.716);
+    font-weight: 700;
+}
+.price-butt{
+    border: 2px solid rgba(180, 11, 8, 0.716);
+    color: rgba(180, 11, 8, 0.716);
+    
+}
+
+
+/* css for cards */
+.parent-container{
+    display:flex;
+    justify-content: center;
+}
+
+
+/* css used when grid is used */
+
+.main-container-grid{
+    width:80%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(140px,1fr)) ;
+    gap:15px;
+}
+
+.card-grid{
+    background-color: #1c1c1c;
+    border-radius:10px;
+    min-height:220px;
+    padding: 25px 15px 40px 15px ;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+.price-change-btn-grid{
+   width:60px;
+   padding:1px 6px;
+
+   
+   border-radius: 14px;
+   font-weight: 700;
+   margin-top:12px;
+   margin-bottom:12px;
+}
+ 
+
+
+
+/* css used when list is displayed */
+
+ .main-container-list{
+    width:85%;
+}
+
+.card-list{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20px;
+}
+
+.price-change-btn-list{
+    width: 60px;
+    padding:1px 6px;
+ 
+    border-radius: 14px;
+    font-weight: 700;
+    margin-top:6px;
+    margin-bottom:6px;
+ 
+ } 
+
+
+/* css for individual components */
+.img-container{
+    width:100px;
+    height:44px;
+
+    display:flex;
+    align-items: center;
+    column-gap: 10px;
+
+}
+.img-con{
+    width: 38px;
+    height:38px;
+}
+.coin-img{
+    width: 100%;
+    height:100%; 
+}
+
+.coin-info > .crypto-symbol{
+   font-weight: 700;
+   font-size: 17px;
+   color:rgb(243, 243, 243);
+}
+.coin-info >.crypto-name{
+    font-size: 12px;
+    line-height: 5px;
+    color:rgb(217, 219, 220);
+}
+
+
+.current-price{
+    font-weight: 700;
+    font-size: 15px; 
+    margin: 5px 0px;
+}
+.market-cap, .volum{
+    display:flex;
+    
+    font-size: 10px; 
+    font-weight: 600;
+    color:rgb(189, 185, 185);
+}
+label{
+    display:none;
+}
+
+
+
+/* class to highight grid and list view button */
+.common{
+    border:none;
+    border-bottom:3px solid rgb(6, 127, 233);
+
+    color:rgb(6, 127, 233);
+}
+
+
+/* for tablet  */
+
+@media(min-width:750px) and (max-width:1200px){
+    .main-container-grid{
+        width:80%;
+        display:grid;
+        grid-template-columns: repeat(3,minmax(190px,1fr)) ;
+        gap:10px;
+    }
+    .price-change-btn-grid{
+        width:60px;
+    }
+    label{
+        display:block;
+        color:rgb(189, 185, 185);
+    }
+    .market-cap, .volum{
+    font-size: 12px;
+    }
+}
+
+
+/* for desktop */
+@media(min-width:1201px){
+    .main-container-grid{
+        width:80%;
+        display:grid;
+        grid-template-columns: repeat(auto-fit,minmax(220px,1fr)) ;
+        gap:10px;
+    }
+    .price-change-btn-grid{
+        width:60px;
+    }
+    .img-container{
+        width:200px;
+    }
+    label{
+        display:block;
+        color:rgb(189, 185, 185);
+    }
+    .market-cap, .volum{
+        font-size: 12px;
+        }
+}
